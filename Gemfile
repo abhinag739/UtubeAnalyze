@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'yt', '~> 0.13.7'
+gem 'yt', '~> 0.25.5'
 
 gem 'bootstrap-sass', '~> 3.3.0.1'
 

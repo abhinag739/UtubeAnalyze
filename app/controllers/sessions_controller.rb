@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    user = User.from_omniauth(request.env['omniauth.auth'])
+    user = User.from_omniauth(request.env['omniauth.auth']) #request.env['omniauth.auth'] contains the Authentication Hash with all the data about a user.
     session[:user_id] = user.id
     flash[:success] = "Welcome #{user.name}"
     redirect_to root_url

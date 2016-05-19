@@ -26,7 +26,10 @@
   	  	    			<p>
   	  	    				<span class="glyphicon glyphicon glyphicon-thumbs-up"></span> <%= video.likes %>
   	  	    				<span class="glyphicon glyphicon glyphicon-thumbs-down"></span> <%= video.dislikes %>
+  	  	    				<span class="glyphicon glyphicon-trash"></span> <%= link_to 'Destroy', video_path(video.id), data: {:confirm => 'Are you sure'}, :method => :delete %>
   	  	    			</p>
+  	  	    		  	
+  	  	    			
   	  	    		</div>
   	  	    	</div>
   	  	    </div>

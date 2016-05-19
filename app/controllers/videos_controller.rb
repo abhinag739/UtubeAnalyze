@@ -13,8 +13,15 @@ def create
     flash[:success]="video added"
     redirect_to root_url
   else
+    flash[:error]="Video couldnt be added"
     render :new
   end
+end
+
+def destroy
+  @video = Video.find(params[:id])
+  @video.destroy
+  redirect_to root_url
 end
 
 end

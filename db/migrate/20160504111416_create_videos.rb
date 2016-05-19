@@ -7,7 +7,8 @@ class CreateVideos < ActiveRecord::Migration
       t.integer :likes
       t.integer :dislikes
       t.string :uid
-
+      t.integer :comment_count
+      t.text :comments
       t.timestamps
     end
     add_index :videos, :uid
