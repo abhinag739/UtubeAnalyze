@@ -8,7 +8,7 @@ class CreateVideos < ActiveRecord::Migration
       t.integer :dislikes
       t.string :uid
       t.integer :comment_count
-      t.text :comments
+      t.text :comments, serialize :comments, JSON 
       t.timestamps
     end
     add_index :videos, :uid

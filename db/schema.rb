@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519214945) do
+ActiveRecord::Schema.define(version: 20160521144318) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(version: 20160519214945) do
     t.integer  "likes"
     t.integer  "dislikes"
     t.string   "uid"
+    t.integer  "comment_count"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "comments",      default: "--- []\n"
-    t.integer  "comment_count"
+    t.text     "comments"
   end
 
   add_index "videos", ["uid"], name: "index_videos_on_uid"

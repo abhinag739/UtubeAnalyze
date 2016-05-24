@@ -21,6 +21,7 @@ end
 def destroy
   @video = Video.find(params[:id])
   @video.destroy
+  session.delete([:id])
   redirect_to root_url
 end
 

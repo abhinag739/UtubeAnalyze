@@ -28,7 +28,24 @@
   	  	    				<span class="glyphicon glyphicon glyphicon-thumbs-down"></span> <%= video.dislikes %>
   	  	    				<span class="glyphicon glyphicon-trash"></span> <%= link_to 'Destroy', video_path(video.id), data: {:confirm => 'Are you sure'}, :method => :delete %>
   	  	    			</p>
-  	  	    		  	
+  	  	    		 <table>
+  	  	    		   <tr>
+  	  	    		   	<th>Author Name&nbsp;&nbsp;&nbsp;</th>&nbsp;&nbsp;&nbsp; 
+  	  	    		   	<th>Like Count&nbsp;&nbsp;&nbsp;</th>&nbsp;&nbsp;&nbsp;
+  	  	    		   	<th>Total Reply Count&nbsp;&nbsp;&nbsp;</th>&nbsp;&nbsp;&nbsp;
+  	  	    		   	<th>Comment&nbsp;&nbsp;&nbsp;</th>&nbsp;&nbsp;&nbsp;
+  	  	    		   </tr>	
+  	  	    		   
+  	  	    	       <% JSON.parse((video.comments.to_json), :quirks_mode => true).each_char do |key, val| %>
+  	  	    		   
+  	  	    		 	 <tr>
+  	  	    		 	 	<td><%= key %><%= val %></td>
+  	  	    		 	 	<td><%= key %><%= val %></td>
+  	  	    		 	 	<td><%= key %><%= val %></td>
+  	  	    		 	 	<td><%= key %><%= val %></td>
+  	  	    		 	 </tr> 	  	    		
+  	  	    		   <% end %>
+  	  	    		 </table>
   	  	    			
   	  	    		</div>
   	  	    	</div>
